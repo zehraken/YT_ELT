@@ -18,7 +18,7 @@ CHANNEL_HANDLE = Variable.get("CHANNEL_HANDLE")
 maxResults = 50
 
 @task
-def get_plasylist_id():
+def get_playlist_id():
     
     try:
 
@@ -155,7 +155,7 @@ def save_to_json(extracted_data):
 # Example usage
 # if the main script is being run directly (not imported as a module) the main part will be run
 if __name__ == "__main__":
-    playlistId = get_plasylist_id()      
+    playlistId = get_playlist_id()      
     video_ids = get_video_ids(playlistId)
     video_data = extract_video_data(video_ids)
     save_to_json(video_data)
